@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil EDT</title>
+    <style>
+        .main-title{
+            text-align: center;
+        }
+        .group-select{
+            padding-top: 5%;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="main-title">Choisissez votre groupe</h1>
+    <div class="group-select">
+        <form action="javascript:redirect()" >
+            <select name="groups" id="groups-selector">
+                <option value="">--Please select your group--</option>
+                <option value="g11">Groupe 1.1</option>
+                <option value="g12">Groupe 1.2</option>
+                <option value="g21">Groupe 2.1</option>
+                <option value="g22">Groupe 2.2</option>
+                <option value="g31">Groupe 3.1</option>
+                <option value="g32">Groupe 3.2</option>
+
+            </select>
+            <button onClick="redirect()" type="submit">Valider</button>
+        </form>
+    </div>
+    <script type="text/javascript">
+        function redirect() {
+            var inputValue = document.getElementById("groups-selector").value;
+            if(inputValue == "g11")
+            {
+                window.location.href = "file:///H:/[DEV]/EDT%20IUT/EDT/edt-g1-1.html";
+            }
+            else if(inputValue == "g12")
+            {
+                location.href = "file:///H:/[DEV]/EDT%20IUT/EDT/edt-g1-2.html";
+            }
+            else if(inputValue == "g21")
+            {
+                location.href = "file:///H:/[DEV]/EDT%20IUT/EDT/edt-g2-1.html";
+            }
+            else if(inputValue == "g22")
+            {
+                location.href = "file:///H:/[DEV]/EDT%20IUT/EDT/edt-g2-2.html";
+            }
+            else if(inputValue == "g31")
+            {
+                location.href = "file:///H:/[DEV]/EDT%20IUT/EDT/edt-g3-1.html";
+            }
+            else if(inputValue == "g32")
+            {
+                location.href = "file:///H:/[DEV]/EDT%20IUT/EDT/edt-g3-2.html";
+            }
+            else
+            {
+                alert("Invalid Input");
+            }
+        }
+    </script>
+</body>
+</html>
